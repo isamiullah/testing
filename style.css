@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  width: 100%;
+}
+
+/* Styling Navbar */
+nav {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 60px;
+}
+nav .flex {
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  color: #fff;
+  padding: 1rem;
+}
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Styling Showcase Area */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+.showcase h1 {
+  padding: 10px 0;
+  font-size: 40px;
+}
+.showcase h2 {
+  margin-bottom: 20px;
+}
+.showcase p {
+  margin: 20px 0;
+}
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 1;
+  justify-self: flex-end;
+}
+.form-control {
+  margin: 30px 0;
+}
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 1rem;
+}
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 80px;
+  right: 0;
+  left: 0;
+  bottom: -60px;
+  transform: skewY(-2.5deg);
+}
+
+/* Styling Stasts Area*/
+.stats {
+  padding-top: 100px;
+}
+.stat-heading {
+  max-width: 500px;
+  margin: auto;
+}
+.grid-3 h3 {
+  font-size: 30px;
+}
+.grid-3 p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/*Styling CLI Area CLI */
+.cli .grid-3 {
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid-3 > :first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.cli .card {
+  margin: 0;
+}
+
+/* Styling languages area */
+.languages .flex {
+  flex-wrap: wrap;
+}
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: 200ms;
+}
+.languages .card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Footer */
+footer .social a {
+  margin: 0 10px;
+}
